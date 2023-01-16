@@ -1,4 +1,5 @@
 # Text-classifier-app
+## [Access the app here!](https://alaym3-text-classifier-app-app-4vwlt1.streamlit.app/)
 
 This streamlit app has deployed a model from the [DTU MLOps final project repo](https://github.com/alaym3/DTU_MLOps_FinalProject).
 
