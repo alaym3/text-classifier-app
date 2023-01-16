@@ -22,7 +22,7 @@ st.markdown('- The model has been trained on a [Rotten Tomatoes review dataset](
         where movie reviews are submitted by expert audiences and regular people.')
 
 # Load model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained("models/")
+model = AutoModelForSequenceClassification.from_pretrained("./models/")
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
 # Prediction for a new phrase
