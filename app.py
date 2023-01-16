@@ -55,6 +55,7 @@ with right:
     st.markdown(f'**Probability of the phrase being negative: {neg_prediction_right}%**')
     st.markdown(f'**Probability of the phrase being positive: {pos_prediction_right}%**')
 
+
 st.markdown('#### About the model:')
 st.markdown('- We started with the pre-trained transformer [bert-base-uncased](https://huggingface.co/bert-base-uncased) since it is the top used model \
     for performing Natural Language Processing tasks on English text, including classification and \
