@@ -3,11 +3,6 @@ import numpy as np
 import pandas as pd
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
-from google.cloud import storage
-# Imports the Google Cloud client library
-
-# Instantiates a client
-storage_client = storage.Client()
 
 #### 1st step always: make layout wider #####
 st.set_page_config(layout="wide", page_title="text-classification")
