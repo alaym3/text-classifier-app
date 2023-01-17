@@ -5,6 +5,10 @@ import pandas as pd
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
 from google.cloud import storage
+# Imports the Google Cloud client library
+
+# Instantiates a client
+storage_client = storage.Client()
 
 #### 1st step always: make layout wider #####
 st.set_page_config(layout="wide", page_title="text-classification")
@@ -13,9 +17,16 @@ st.title('Sentiment classification app')
 st.markdown('### This app allows you to type in a phrase and see how much the phrase is classified to be positive or negative. \
     Try it out on your own, and even compare the results for two different phrases!')
 
-# Load model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained("./models/")
-tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+@st.cache
+def load_model():
+    # Load model and tokenizer
+    model = AutoModelForSequenceClassification.from_pretrained("./models/")
+    # model = AutoModelForSequenceClassification.from_pretrained("gs://dtu_mlops_final_model")
+    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+    return model, tokenizer
+
+model, tokenizer = load_model()
+
 
 
 left, right = st.columns(2)
