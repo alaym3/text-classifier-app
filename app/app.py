@@ -11,7 +11,7 @@ st.title('Sentiment classification app')
 st.markdown('### This app allows you to type in a phrase and see how much the phrase is classified to be positive or negative. \
     Try it out on your own!')
 
-@st.cache
+# @st.cache
 def load_model():
     # Load model and tokenizer
     model = AutoModelForSequenceClassification.from_pretrained("./models/")
