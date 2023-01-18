@@ -1,3 +1,6 @@
+google-cloud
+google-cloud-storage
+google-cloud-language
 numpy==1.22.3
 pandas==1.4.3
 setuptools==45.2.0
